@@ -18,6 +18,7 @@ public class lopezspawn : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.name == "macri") {
+			Debug.Log ("se instancio");
 			Instantiate (lopez,lopezpunto.position,lopezpunto.rotation);
 		}
 		Destroy (gameObject);

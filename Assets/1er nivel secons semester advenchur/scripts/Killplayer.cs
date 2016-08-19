@@ -3,11 +3,13 @@ using System.Collections;
 
 public class Killplayer : MonoBehaviour {
 
+	public Fade fade;
+
 	public LevelManager levelManager ;
 
 	// Use this for initialization
 	void Start () {
-		levelManager = FindObjectOfType<LevelManager> ();
+		fade = FindObjectOfType<Fade> ();
 	
 	}
 	
@@ -19,7 +21,7 @@ public class Killplayer : MonoBehaviour {
 	void  OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.name == "macri"){
-			levelManager.RespawnPlayer();
+			fade.EndScene ();
 		}
 	}
 
