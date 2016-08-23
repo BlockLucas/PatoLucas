@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class macricontrol : MonoBehaviour {
+	public float xOffset;
+	public float yOffset;
+	public float zOffset;
 	public float moveSpeed;
 	private float moveVelocity;
 	public float jumpHeight;
@@ -93,6 +96,9 @@ public class macricontrol : MonoBehaviour {
 			
 		}
 
+		// fix camera
+		float x = transform.position.x;
+		Camera.main.transform.position = new Vector3 (transform.position.x + xOffset, transform.position.y + yOffset, transform.position.z + zOffset);
 
 	}
 }
