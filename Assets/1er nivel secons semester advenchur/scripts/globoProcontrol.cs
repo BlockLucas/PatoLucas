@@ -38,7 +38,8 @@ public class globoProcontrol : MonoBehaviour {
 		}
 
 
-
-		Destroy (gameObject);
+		if (other.tag != "trigger") {
+			Destroy (gameObject);
+		}
 	}
 }
